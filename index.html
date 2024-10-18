@@ -3,39 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Formulário</title>
+    <title>Layout em Duas Colunas</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('./imagem.jpg'); /* Substitua pelo caminho da sua imagem */
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
         }
-
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
-            border-radius: 10px;
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .column {
+            flex: 1;
             padding: 20px;
-            max-width: 600px;
-            margin: 50px auto; /* Centraliza o formulário */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
         }
-
-        iframe {
-            width: 100%;
-            height: 600px; /* Ajuste a altura conforme necessário */
-            border: none;
+        .left {
+            background-color: #f4f4f4;
+        }
+        .right {
+            background-color: #e2e2e2;
         }
     </style>
 </head>
 <body>
 
-    <div class="form-container">
-        <h2>Preencha o Formulário</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSethncJFP8DUO9VVlIcG-4yxQIUSJ1PtENzHCTrDP4xNQ7P6w/viewform?embedded=true" width="640" height="406" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe> <!-- Substitua pelo link do seu Google Form -->
+<div class="container">
+    <div class="column left">
+        <h2>Coluna Esquerda</h2>
+        <p>Este é o conteúdo da coluna esquerda. Você pode adicionar texto, imagens ou qualquer outro elemento que desejar.</p>
     </div>
+    <div class="column right">
+        <h2>Coluna Direita</h2>
+        <p>Este é o conteúdo da coluna direita. Aqui você pode adicionar informações complementares ou outras seções.</p>
+    </div>
+</div>
 
 </body>
 </html>
